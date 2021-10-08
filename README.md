@@ -5,9 +5,9 @@ Feel free to clone the repo and do changes.
 Happy learning.
 
 # images
-![Alt text](https://github.com/yashodeepk/BreathHold/blob/master/assets/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202021-04-19%20at%2015.48.47.png?raw=true "Device")
+![Alt text](https://github.com/yashodeepk/breath_o_meter/blob/master/assets/Screenshot%202021-04-19%20at%203.08.00%20PM.png "Screen Shot Simulator")
 
-![Alt text](https://github.com/yashodeepk/BreathHold/blob/master/assets/Screenshot%202021-04-19%20at%203.08.00%20PM.png?raw=true "screen shot simulator")
+![Alt text](https://github.com/yashodeepk/breath_o_meter/blob/master/assets/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202021-04-19%20at%2015.48.47.png "Device")
 
 ## Getting Started
 
