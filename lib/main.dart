@@ -27,7 +27,6 @@ class _BreathOMeterState extends State<BreathOMeter> {
   bool clicked = false;
   Stopwatch watch = new Stopwatch();
   dynamic db;
-
   @override
   void initState() {
     super.initState();
@@ -83,7 +82,11 @@ class _BreathOMeterState extends State<BreathOMeter> {
           ],
         ),
         body: Padding(
-          padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+          padding: EdgeInsets.fromLTRB(
+              MediaQuery.of(context).size.width * 0.03,
+              MediaQuery.of(context).size.height * 0.04,
+              MediaQuery.of(context).size.width * 0.03,
+              0.0),
           child: Column(
             children: <Widget>[
               Text(
@@ -103,10 +106,10 @@ class _BreathOMeterState extends State<BreathOMeter> {
                   letterSpacing: 1.0,
                 ),
               ),
-              SizedBox(height: 60.0),
+              SizedBox(height: MediaQuery.of(context).size.width * 0.1),
               Container(
-                height: 350,
-                width: 350,
+                height: MediaQuery.of(context).size.height * 0.40,
+                width: MediaQuery.of(context).size.width * 0.80,
                 child: LiquidCircularProgressIndicator(
                   value: holdperiod / 100,
                   valueColor: AlwaysStoppedAnimation(Colors.red[700]),
@@ -123,7 +126,7 @@ class _BreathOMeterState extends State<BreathOMeter> {
                   ),
                 ),
               ),
-              SizedBox(height: 60.0),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.08),
               Center(
                 child: ElevatedButton(
                   onPressed: () {
@@ -146,7 +149,8 @@ class _BreathOMeterState extends State<BreathOMeter> {
                   child: Text('$buttonValue'),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.red[600]),
-                    padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                    padding: MaterialStateProperty.all(EdgeInsets.all(
+                        MediaQuery.of(context).size.height * 0.030)),
                     textStyle:
                         MaterialStateProperty.all(TextStyle(fontSize: 30)),
                   ),
