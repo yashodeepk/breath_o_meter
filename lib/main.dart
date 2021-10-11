@@ -109,7 +109,7 @@ class _BreathOMeterState extends State<BreathOMeter> {
               SizedBox(height: MediaQuery.of(context).size.width * 0.1),
               Container(
                 height: MediaQuery.of(context).size.height * 0.40,
-                width: MediaQuery.of(context).size.width * 0.80,
+                width: MediaQuery.of(context).size.height * 0.40,
                 child: LiquidCircularProgressIndicator(
                   value: holdperiod / 100,
                   valueColor: AlwaysStoppedAnimation(Colors.red[700]),

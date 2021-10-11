@@ -102,10 +102,13 @@ class _DataPageState extends State<DataPage> {
                                         DateTime.fromMillisecondsSinceEpoch(
                                                     trip.timeStamp)
                                                 .toString() +
-                                            "",
+                                            " ",
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 16,
+                                          fontSize: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.045,
                                         ),
                                       ),
                                       //SizedBox(width: 40),
@@ -115,12 +118,18 @@ class _DataPageState extends State<DataPage> {
                                             " ms",
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 16,
+                                          fontSize: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.045,
                                         ),
                                       ),
                                       IconButton(
                                           icon: Icon(Icons.delete),
-                                          iconSize: 18,
+                                          iconSize: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.045,
                                           color: Colors.white,
                                           onPressed: () {
                                             setState(() {
