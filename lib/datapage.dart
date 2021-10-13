@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:breath_o_meter/database.dart';
 import 'package:breath_o_meter/model/breath_record.dart';
+import 'package:intl/intl.dart';
 
 class DataPage extends StatefulWidget {
   @override
@@ -26,6 +27,13 @@ class _DataPageState extends State<DataPage> {
     setState(() {
       fetching = false;
     });
+  }
+
+  String timeStampFormatter(int timestamp) {
+    var dt = DateTime.fromMillisecondsSinceEpoch(timestamp);
+    var d12 = DateFormat('dd-MM-yyyy  hh:mm a').format(dt).toString();
+
+    return d12;
   }
 
   @override
@@ -99,9 +107,7 @@ class _DataPageState extends State<DataPage> {
                                     children: <Widget>[
                                       //SizedBox(width: 40),
                                       Text(
-                                        DateTime.fromMillisecondsSinceEpoch(
-                                                    trip.timeStamp)
-                                                .toString() +
+                                        timeStampFormatter(trip.timeStamp) +
                                             " ",
                                         style: TextStyle(
                                           color: Colors.white,

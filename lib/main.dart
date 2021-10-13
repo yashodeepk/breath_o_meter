@@ -118,7 +118,7 @@ class _BreathOMeterState extends State<BreathOMeter> {
                   borderWidth: 4.0,
                   direction: Axis.vertical,
                   center: Text(
-                    '$holdperiod' + " sec",
+                    holdperiod.toStringAsFixed(2) + " sec",
                     style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.w600,
