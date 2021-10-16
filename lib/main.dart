@@ -23,7 +23,7 @@ class BreathOMeter extends StatefulWidget {
 class _BreathOMeterState extends State<BreathOMeter> {
   Timer timer;
   double holdperiod = 0;
-  String buttonValue = "HOLD";
+  String buttonValue = "START";
   bool clicked = false;
   Stopwatch watch = new Stopwatch();
   dynamic db;
@@ -99,7 +99,7 @@ class _BreathOMeterState extends State<BreathOMeter> {
               ),
               SizedBox(height: 5.0),
               Text(
-                'Press hold',
+                'Press on START',
                 style: TextStyle(
                   color: Colors.grey[400],
                   fontSize: 18,
@@ -118,7 +118,7 @@ class _BreathOMeterState extends State<BreathOMeter> {
                   borderWidth: 4.0,
                   direction: Axis.vertical,
                   center: Text(
-                    holdperiod.toStringAsFixed(2) + " sec",
+                    holdperiod.toStringAsFixed(1) + " sec",
                     style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.w600,
@@ -135,13 +135,13 @@ class _BreathOMeterState extends State<BreathOMeter> {
                         clicked = false;
                         watch.stop();
                         holdperiod = watch.elapsedMilliseconds / 1000;
-                        buttonValue = "HOLD";
+                        buttonValue = "START";
                         saveData();
                       } else {
                         clicked = true;
                         watch.start();
                         timer = new Timer.periodic(
-                            new Duration(milliseconds: 1000), updateTime);
+                            new Duration(milliseconds: 100), updateTime);
                         buttonValue = "STOP";
                       }
                     });
