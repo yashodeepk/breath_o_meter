@@ -121,7 +121,7 @@ class _DataPageState extends State<DataPage> {
                                       Text(
                                         double.parse(trip.holdPeriod.toString())
                                                 .toStringAsFixed(2) +
-                                            " ms",
+                                            " sec",
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: MediaQuery.of(context)
